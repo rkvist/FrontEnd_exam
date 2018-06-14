@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foobar // Intern</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.svg" alt="">
+    </header>
+    <main>
+        <div id="costumerInfo">
+            <div id="queueLine">
+                <p>In Queue</p>
+                <h2 id="queueNumber"></h2>
+            </div>
+            <div id="servingLine">
+                <p>Serving</p>
+                <h2 id="servingNumber"></h2>
+            </div>
+            <div   id="orderContainer">
+            
+            </div>
+        </div>
+        <div class="headline">
+            <h6>Bartenders</h6>
+        </div>
+        <div id="bartenderInfo">
+        
+        </div>
+        <div class="headline">
+                <h6>Taps</h6>
+            </div>
+        <div id="kegInfo">
+            
+        </div>
+        <div class="headline">
+                <h6>Storage</h6>
+            </div>
+        <div id="storageInfo">
+
+        </div>
+        <div id="infoboks">
+
+        </div>
+    </main>
+    <template id="bartender_temp">
+        <div>
+        <div>
+            <p class="bartenderNames"></p>
+        </div>
+        <div>
+            <h4 class="bartenderStatus"></h4>
+        </div>
+    </div>
+    </template>
+    <template id="order_temp">
+        <div>    
+        <h3>Order <span class="orderId"></span></h3>
+            <ul class="orderItem">
+        <!-- <li class="orderItem"></li> -->
+    </ul>   
+</div>
+    </template>
+    
+    <template id="keg_temp">
+        <div>
+            <h4 class="kegName"></h4>
+            <?xml version="1.0" encoding="utf-8"?>
+
+
+            <svg version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 501 501" style="enable-background:new 0 0 501 501;" xml:space="preserve">
+
+                    <defs>
+                    <mask id="liquidMasked">
+                    <path fill="#FFF" d="M294.3,377.1c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c48.3,0,96.5,0,144.8,0 C309,257.2,301.7,316.3,294.3,377.1z"/path></mask> 
+                    </defs>
+                    <path class="cup" d="M301.4,382.2c-37.4,10.4-77.9,10.3-115.2-0.3c-8.1-66.7-16.1-131.6-24.5-193c55.1,0,110.1,0,165.2,0
+                    C318.1,250.3,309.8,315.3,301.4,382.2z"/>
+                    <g id="coffeeMasked" mask="url(#liquidMasked)">
+                   
+                   
+                    <path class="liquid" d="M293.8,380.6c-32.8,9.4-68.2,9.3-101-0.2c-7.1-60.7-14.1-119.7-21.5-175.6c0,0,12-7.1,31.3-0.4
+                    c29.8,10.3,32.7-0.2,48.7-0.2c27.4,0,29.2,8.8,44.7,1.3c14.7-7.1,20.2-0.7,20.2-0.7C308.5,256.7,301.2,315.8,293.8,376.6z"/>
+                    </g>
+                    </g>
+                    </svg>
+            <div class="capacityIndicator"></div>
+        </div>
+    </template>
+    <template id="storage_temp">
+        <article class="storageIndicator">
+            <h4 class="storageName"></h4>
+            <h2 class="storageAmount"></h2>
+        </article>
+    </template>
+    <template id="info_temp">
+        <section>
+        <article>
+            <h2  class="BeerName"></h2>
+            <div class="close">
+                <span></span>
+                <span></span>
+            </div>
+        </article>
+        <article class="beerInfo1">
+                <div>
+                    <ul>
+                        <li>Category: <span class="catInfo"></span></li>
+                        <li>Pouring speed: <span  class="pouringInfo"></span></li>
+                        <li>Popularity: <span  class="popInfo"></span></li>
+                        <li>Alcohol: <span  class="alcInfo"></span>%</li>
+                    </ul>
+                    <h5>Overall Impression</h5>
+                    <p class="overall"></p>
+                </div>
+                <div><img class="beerImg" src=""></div>
+        </article>
+        <article class="beerInfo2">
+            <div class="info2">
+                <h5>Appearance</h5>
+                <p class="appInfo"></p>
+                <h5>Aroma</h5>
+                <p class="aromaInfo"></p>
+            </div>
+            <div class="info3">
+                <h5>Mouthfeel</h5>
+                <p class="mouthInfo"></p>
+                <h5>Flavor</h5>
+                <p class="flavorInfo"></p>
+            </div>
+        </article>
+    </section>
+    </template>
+
+    <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #2b2b2b;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  color: #fff;
+  font-family: "Montserrat", sans-serif; }
+  @media screen and (max-width: 767px) {
+    body {
+      display: inherit; } }
+
+header {
+  background-color: #1a1a1a;
+  box-shadow: #000 0 0 15px;
+  z-index: 3; }
+  header img {
+    width: 90%;
+    margin: 0 auto; }
+    @media screen and (max-width: 767px) {
+      header img {
+        height: 13vw;
+        padding-top: 1vw; } }
+  @media screen and (max-width: 767px) {
+    header {
+      height: 15vw; } }
+
+h2 {
+  font-size: 6vw;
+  margin-top: 3vw;
+  letter-spacing: 0.08em; }
+
+.headline {
+  background-color: #1a1a1a;
+  font-size: 2vw;
+  padding: 2vw; }
+  @media screen and (max-width: 1024px) {
+    .headline {
+      font-size: 3vw; } }
+  @media screen and (max-width: 767px) {
+    .headline {
+      font-size: 7vw; } }
+  @media screen and (max-width: 400px) {
+    .headline {
+      font-size: 10vw; } }
+
+main {
+  text-align: center;
+  display: grid; }
+  main #costumerInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    height: 20vw; }
+    @media screen and (max-width: 1024px) {
+      main #costumerInfo {
+        height: auto;
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (max-width: 400px) {
+      main #costumerInfo {
+        grid-template-columns: 1fr; } }
+    main #costumerInfo #queueLine {
+      padding: 2vw;
+      border: 2px solid #000; }
+    main #costumerInfo #servingLine {
+      padding: 2vw;
+      border: 2px solid #000; }
+    main #costumerInfo #orderContainer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); }
+      @media screen and (max-width: 1024px) {
+        main #costumerInfo #orderContainer {
+          grid-column: 1 / span 2; } }
+      @media screen and (max-width: 400px) {
+        main #costumerInfo #orderContainer {
+          grid-column: 1;
+          grid-template-columns: 1fr; } }
+      main #costumerInfo #orderContainer div {
+        border: 2px solid #000;
+        padding: 2vw; }
+      main #costumerInfo #orderContainer ul {
+        margin-top: 10px; }
+        main #costumerInfo #orderContainer ul li {
+          margin-top: 5px;
+          list-style-type: none; }
+  main #bartenderInfo {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 20vw;
+    border: 2px solid #000; }
+    @media screen and (max-width: 1024px) {
+      main #bartenderInfo {
+        height: auto; } }
+    main #bartenderInfo div {
+      display: grid;
+      grid-template-columns: 3fr 2fr; }
+      main #bartenderInfo div div {
+        padding: 2vw;
+        vertical-align: middle;
+        display: inline; }
+  main #kegInfo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); }
+    @media screen and (max-width: 1024px) {
+      main #kegInfo {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media screen and (max-width: 767px) {
+      main #kegInfo {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 400px) {
+      main #kegInfo {
+        grid-template-columns: 1fr; } }
+    main #kegInfo div {
+      height: 22vw;
+      padding-top: 2vw;
+      border: 2px solid #000; }
+      @media screen and (max-width: 1024px) {
+        main #kegInfo div {
+          height: auto; } }
+      main #kegInfo div .capacityIndicator {
+        padding: 0;
+        width: 100%;
+        height: 20px;
+        border: 0 solid #000; }
+  main #storageInfo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); }
+    @media screen and (max-width: 1024px) {
+      main #storageInfo {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (max-width: 400px) {
+      main #storageInfo {
+        grid-template-columns: 1fr; } }
+    main #storageInfo article {
+      padding: 2vw;
+      height: 20vw;
+      border: 2px solid #000; }
+      @media screen and (max-width: 1024px) {
+        main #storageInfo article {
+          height: auto; } }
+  main #infoboks h2 {
+    font-size: 3vw;
+    color: #F0A700; }
+  main #infoboks section {
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    right: -70vw;
+    height: 100vh;
+    width: 70vw;
+    overflow: auto;
+    z-index: 3;
+    text-align: left;
+    transition: right 1s ease; }
+    @media screen and (max-width: 1024px) {
+      main #infoboks section {
+        right: -100vw;
+        width: 100vw; } }
+    main #infoboks section .close {
+      position: relative;
+      display: flex;
+      height: 4vw;
+      width: 4vw;
+      align-self: flex-end; }
+      main #infoboks section .close span {
+        position: absolute;
+        top: 50%;
+        display: block;
+        height: 2px;
+        width: 4vw;
+        transform: rotate(45deg);
+        border: #fff 4px solid;
+        border-radius: 3px; }
+      main #infoboks section .close span:first-child {
+        transform: rotate(45deg); }
+      main #infoboks section .close span:last-child {
+        transform: rotate(-45deg); }
+    main #infoboks section article:first-child {
+      display: grid;
+      grid-template-columns: 12fr 1fr; }
+    main #infoboks section article {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2vw;
+      padding: 2vw;
+      height: auto;
+      width: auto;
+      background: none; }
+      @media screen and (max-width: 1024px) {
+        main #infoboks section article {
+          grid-template-columns: 1fr; } }
+      main #infoboks section article li {
+        list-style-type: none;
+        margin-bottom: 0.4vw; }
+      main #infoboks section article h5 {
+        font-size: 1.5vw;
+        margin-top: 2vw;
+        margin-bottom: 0.33333vw; }
+    main #infoboks section p {
+      font-size: .8em; }
+    main #infoboks section img {
+      float: right;
+      height: 100%;
+      max-height: 180px; }
+      @media screen and (max-width: 1024px) {
+        main #infoboks section img {
+          float: none; } }
+
+svg {
+  height: 15vw;
+  width: 16vw; }
+  @media screen and (max-width: 400px) {
+    svg {
+      height: 30vw;
+      width: 32vw; } }
+
+.cup {
+  fill: #fff; }
+
+.liquid {
+  fill: #F0A700;
+  stroke: #F0A700;
+  stroke-miterlimit: 10; }
+
+/* ANIMATE LIQUID FILL */
+.liquid {
+  transform: translateY(0);
+  animation-fill-mode: forwards;
+  transition: transform 1s ease-in; }
